@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/tenement.css?v=1.0">
+    <link rel="stylesheet" href="iconfont/iconfont.css">
+    <script src="iconfont/iconfont.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=eM0CrhFbGuFFnhUZQrHEM2Sl"></script>
+</head>
+<body>
+<div class="head">
+    <div class="head-center">
+        <img src="images/logo.png">
+        <div class="position">南京 <span>&#xe659;</span></div>
+        <div class="nav">
+            <a href="#">首页</a>
+            <a href="#">爱租找房</a>
+            <a href="#">地图找房</a>
+            <a href="#">爱租金融</a>
+        </div>
+        <div class="login">
+            <div><a href="#">用户登录</a></div>
+            <div class="line">|</div>
+            <div><a href="#">公寓登录</a></div>
+            <div class="line">|</div>
+            <div><a href="#"><span>&#xe602;</span>手机爱租</a></div>
+        </div>
+    </div>
+</div>
+<div class="main">
+    <div class="select-area">
+        <span class="select">合肥</span>&nbsp;&nbsp;
+        <span class="select">重庆</span>&nbsp;&nbsp;
+        <span class="select">上海</span>&nbsp;&nbsp;
+        <span class="select">四川</span>&nbsp;&nbsp;
+        <br>
+        <span class="select">芜湖</span>&nbsp;&nbsp;
+        <span class="select">北京</span>&nbsp;&nbsp;
+    </div>
+    <div class="position-nav">
+        <div class="top-pos">您的当前位置：爱租哪 > 个人中心 > 发布房源</div>
+        <div class="left-nav">
+            <div class="account">
+                <div class="title">
+                    <p>账户管理</p>
+                </div>
+                <div class="content">
+                    <p>个人资料</p>
+                    <p>修改密码</p>
+                    <p class="font">手机修改</p>
+                </div>
+            </div>
+            <div class="star">
+                <div class="title">
+                    <p>我的收藏</p>
+                </div>
+                <div class="content">
+                    <p>收藏房源</p>
+                    <p>找房条件</p>
+                </div>
+            </div>
+            <div class="release">
+                <div class="title">
+                    <p>我的发布</p>
+                </div>
+                <div class="content">
+                    <p>发布房源</p>
+                    <p>已发布房源</p>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="right">
+        <div class="step">
+            <div class="base">基本信息</div>
+            <div class="else"></div>
+        </div>
+        <div class="title">
+            <span><span class="mark">*</span>小区名称 : &nbsp;</span>
+            <input type="text" class="name" placeholder="请输入小区名称" >
+            &nbsp;&nbsp;
+            <span class="iconfont" id="iconfont1"></span>
+        </div>
+        <div class="guide">地图导航</div>
+        <div class="fuzzy-query">
+
+        </div>
+        <div id="allmap"></div>
+        <div class="title">
+            <span><span class="mark">*</span>区域板块 : &nbsp;</span>
+            <select name="select1" class="area area1">
+                <option value="">区属</option>
+                <option value="">江宁区</option>
+                <option value="">六合区</option>
+                <option value="">鼓楼区</option>
+                <option value="">浦口区</option>
+                <option value="">秦淮区</option>
+            </select>
+            <span id="check"> &nbsp;</span>
+            <select name="select2" class="area area2">
+                <option value="">板块</option>
+                <option value="">板块1</option>
+                <option value="">板块2</option>
+                <option value="">板块3</option>
+            </select>
+            <span id="check2"></span>
+        </div>
+        <div class="title title2">
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="mark">*</span>户型 : &nbsp;</span>
+            <input type="text" class="house-type" >
+            <span class="font">室</span>
+            <input type="text" class="house-type" >
+            <span class="font">厅</span>
+            <input type="text" class="house-type">
+            <span class="font">卫</span>
+            <input type="text" class="house-type">
+            <span class="font">阳台</span>
+            <span id="check7"></span>
+        </div>
+        <div class="title">
+                <span class="mark">*</span>出租形式 :
+                <input type="radio" class="radio" value="整租" name="rent_tye" >
+                <label for="rent_tye">整租</label>
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" class=" radio radio2" value="合租" name="rent_tye" checked="checked">
+                <label for="rent_tye">合租</label>
+            <select name="select" class="choose">
+                <option value="">选择卧室内容</option>
+                <option value="">选择卧室内容1</option>
+                <option value="">选择卧室内容2</option>
+                <option value="">选择卧室内容3</option>
+            </select>
+            <span id="check3">  &nbsp;&nbsp;</span>
+            <select name="select" class="choose choose2">
+                <option value="">选择限制条件</option>
+                <option value="">选择限制条件1</option>
+                <option value="">选择限制条件2</option>
+                <option value="">选择限制条件3</option>
+            </select>
+            <span id="check4"></span>
+        </div>
+        <div class="title space">
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="mark">*</span>面积 : &nbsp;</span>
+            <div class="input">
+                <input type="text" class="vast" placeholder="请输入面积">
+                <span>平方米</span>
+            </div>
+            <span id="check5"></span>
+        </div>
+        <div class="title rent">
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="mark">*</span>租金 : &nbsp;</span>
+            <div class="input">
+                <input type="text" class="rent" id="rent" placeholder="请输入租金">
+                <span>元/月</span>
+            </div>
+            <span id="check6"></span>
+        </div>
+        <div class="title title3">
+            <span><span class="mark">*</span>付款方式 : </span>
+            <div class="payway">
+                <div>
+                    <input type="checkbox"  name="month" class="pay">
+                    <label for="month">月付</label>
+                </div>
+                <div><input type="checkbox"  name="season"class="pay">
+                    <label for="season">季付</label></div>
+                <div><input type="checkbox"  name="year"class="pay">
+                    <label for="year">年付</label></div>
+                <div><input type="checkbox"  name="half-year"class="pay">
+                    <label for="half-year">半年付</label></div>
+                <div><input type="checkbox"  class="above"name="all">
+                    <label for="all">都可以</label></div>
+            </div>
+        </div>
+        <div class="title title6">
+            <div class="file">+</div>
+             <input type="file" class="dataup">
+        </div>
+        <div id="pic">
+            <div class="closed">x</div>
+        </div>
+        <div class="title title4">
+            <span><span class="mark">*</span>手机验证 : &nbsp;</span>
+            <input class="text" type="text" value="" placeholder="请输入手机号">
+            <span class="code"></span>
+        </div>
+        <div class="title5">
+            <span>
+                <span class="mark">*</span>
+                总体需求：</span>
+            <div id="need" ></div>
+        </div>
+        <input type="submit" value="提 交" class="submit">
+        <span id="check8"></span>
+    </div>
+</div>
+<div class="footer">
+  <div class="center">
+      <div class="contect">
+          <span>首页 | 爱租找房 | 地图找房 | 爱租金融 | 公司介绍</span>
+          <br>
+          <span>苏ICP证编号 B2-20110162 信息网络传播视听节目许可证 1009365 号</span>
+          <br>
+          <img src="images/bottom-icon.png">
+          <span>苏公网安备 32010502010010号</span>
+      </div>
+  </div>
+</div>
+</body>
+</html>
+<script src="js/jquery.min.js"></script>
+<script src="js/map.js"></script>
+<script src="js/check-input.js"></script>
+<script src="js/position-city.js"></script>
+<script src="js/check-input.js"></script>
+<script src="js/check-mobile.js"></script>
+<script src="js/file.js"></script>
